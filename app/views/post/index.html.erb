@@ -1,0 +1,12 @@
+<div class="row">
+	<div class="four">
+		<p>these are our previous visitors</p>
+		<%= link_to "add a guest", :controller => :post, :action => :add %>
+		<%= link_to "remove a guest", :controller => :post, :action => :remove %>
+		<ul>
+			<% @posts.each do |post| %>
+				<li><%= post.name %> - <%= post.id %></li>
+			<% end %>
+		</ul>
+	</div>
+</div>

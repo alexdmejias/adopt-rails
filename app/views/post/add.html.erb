@@ -1,0 +1,11 @@
+<div class="row">
+	<div class="four">
+		<h1>add a new user</h1>
+		<%= link_to "view our past guests", :controller => :post, :action => :index %>
+		<%= form_tag :action => 'add' do %>
+			<p>enter your name:</p>
+			<%= text_field_tag 'visitor_name', @name %>
+			<%= submit_tag 'Sign in' %>
+		<% end %>
+	</div>
+</div>

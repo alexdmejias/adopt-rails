@@ -1,0 +1,17 @@
+<div class="row">
+	<h1><%= @post %></h1>
+	<%= link_to "view our past guests", :controller => :post, :action => :index %>
+	<div class="four">
+		<%= form_tag :action => 'remove' do %>
+		<p>endter id to delete</p>
+		<%= text_field_tag 'id', @name %>
+		<%= submit_tag %>
+		<% end %>
+		<p>these are our previous visitors</p>
+		<ul>
+			<% @posts.each do |post| %>
+				<li><%= post.name %> - <%= post.id %></li>
+			<% end %>
+		</ul>
+	</div>
+</div>
